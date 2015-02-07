@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <conio.h>
 
 using namespace std;
 
@@ -27,37 +28,28 @@ using namespace std;
 int main()
 {
 	string input;
-	getline(cin, input);
-
-	vector<int> arr(1);
-	// string으로 입력받고 쉼표를 구분자로 parsing합니다.
+	
+	char ch = 0;
+	while ((ch = _getch()) == '\n')
 	{
-		int cursor = 0;
-		for (string::const_iterator iter = input.begin(); iter != input.end(); ++iter)
+		if (ch == ',')
 		{
-			if ((*iter) == ',')
+			// 중복되는 수는 무시합니다.
+			if (find(arr.begin(), arr.end(), arr[cursor]) != arr.end())
 			{
-				// 중복되는 수는 무시합니다.
-				if (find(arr.begin(), arr.end() -1, arr[cursor]) != arr.end() -1)
-				{
-					arr[cursor] = 0;
-				}
-				else
-				{
-					++cursor;
-					arr.push_back(0);
-				}
-				continue;
+				arr[cursor] = 0;
 			}
-
-			// intInput[iter] (십진수)<< 1;
-			arr[cursor] *= 10;
-			arr[cursor] += (*iter) - '0';
+			else
+			{
+				++cursor;
+				arr.push_back(0);
+			}
+			continue;
 		}
+
+		// intInput[iter] (십진수)<< 1;
+		arr[cursor] *= 10;
+		arr[cursor] += (*iter) - '0';
 	}
-
-	for (vector<int>::const_iterator iter = arr.begin(); iter != arr.end(); ++iter)
-		cout << (*iter) << ',';
-
 	return 0;
 }

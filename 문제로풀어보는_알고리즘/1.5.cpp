@@ -1,25 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int numberBills, inputMoney;
-int counter = 0;
-int *bills;
-
-int foo(int i, int money)
+int foo(int bills[], int billCount, int money)
 {
-	int count = 0;
+	if (billCount == 0 && bills[billCount])
+		return 1;
 
-	int j = 0;
-	for (j = money; j > 0; j -= bills[i])
-		if (foo(i+1, j) != 0)
-			++count;
+	//int count = 0;
 
-	return count;
+	//int j = 0;
+	//for (j = money; j > 0; j -= bills[billCount])
+	//	if (foo(billCount+1, j) != 0)
+	//		++count;
+
+	//return count;
 }
 
 int main()
 {
-	int i, j, l, k;
+	int numberBills, inputMoney;
+	int counter = 0;
+	int *bills;
+	int i;
 
 	printf("input number of bills: ");
 	scanf("%d", &numberBills);
@@ -33,7 +35,7 @@ int main()
 	printf("input money: ");
 	scanf("%d", &inputMoney);
 
-	foo(inputMoney);
+	foo(bills, numberBills, inputMoney);
 
 	free(bills);
 }
