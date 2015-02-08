@@ -24,16 +24,16 @@ int main()
 	int i;
 
 	printf("input number of bills: ");
-	scanf("%d", &numberBills);
+	scanf_s("%d", &numberBills);
 
 	bills = (int *)malloc(numberBills * sizeof(int));
 
 	printf("input bills: ");
 	for (i = 0; i < numberBills; ++i)
-		scanf("%d", &bills[i]);
+		scanf_s("%d", &bills[i]);
 
 	printf("input money: ");
-	scanf("%d", &inputMoney);
+	scanf_s("%d", &inputMoney);
 
 	foo(bills, numberBills, inputMoney);
 

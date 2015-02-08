@@ -1,15 +1,14 @@
-#pragma once
-
 #include <stdio.h>
-
-#include "0.3.h"
-
 /* 0.4 은행 대기번호 관리 */
+
+//#include "0.3.c"
+extern void left_rotate(int[], int, int);
+
 // Q. 배열로 큐 작성하기
 
 #define QUEUE_SIZE 8
 
-int main_04_0()
+int main()
 {
 	int queue[QUEUE_SIZE] = {0, 0, 0, 0, 0, 0, 0, 0};
 
@@ -18,7 +17,7 @@ int main_04_0()
 	while (1)
 	{
 		printf("Input Number: ");
-		scanf("%d", &input);
+		scanf_s("%d", &input);
 
 		// 0보다 크면 입력
 		if (input > 0)
@@ -49,6 +48,6 @@ int main_04_0()
 		else
 			break;
 	}
-}
 
-// Q. 원형 큐 작성
+	return 0;
+}

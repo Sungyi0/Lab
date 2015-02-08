@@ -27,29 +27,29 @@ using namespace std;
 
 int main()
 {
-	string input;
-	
-	char ch = 0;
-	while ((ch = _getch()) == '\n')
-	{
-		if (ch == ',')
-		{
-			// 중복되는 수는 무시합니다.
-			if (find(arr.begin(), arr.end(), arr[cursor]) != arr.end())
-			{
-				arr[cursor] = 0;
-			}
-			else
-			{
-				++cursor;
-				arr.push_back(0);
-			}
-			continue;
-		}
+	//string input;
+	//
+	//char ch = 0;
+	//while ((ch = _getch()) == '\n')
+	//{
+	//	if (ch == ',')
+	//	{
+	//		// 중복되는 수는 무시합니다.
+	//		if (find(arr.begin(), arr.end(), arr[cursor]) != arr.end())
+	//		{
+	//			arr[cursor] = 0;
+	//		}
+	//		else
+	//		{
+	//			++cursor;
+	//			arr.push_back(0);
+	//		}
+	//		continue;
+	//	}
 
-		// intInput[iter] (십진수)<< 1;
-		arr[cursor] *= 10;
-		arr[cursor] += (*iter) - '0';
-	}
+	//	// intInput[iter] (십진수)<< 1;
+	//	arr[cursor] *= 10;
+	//	arr[cursor] += (*iter) - '0';
+	//}
 	return 0;
 }

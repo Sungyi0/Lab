@@ -1,5 +1,3 @@
-#pragma once
-
 /* 0.2 두 변수의 값 바꾸기 */
 // Q. 포인터를 이용하여 값을 바꾸는 함수
 void swap(int *a, int *b)

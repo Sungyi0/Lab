@@ -76,13 +76,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1.5.cpp" />
+    <ClCompile Include="array_circlequeue.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1.5.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="array_stack.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="0.1.h" />
-    <ClInclude Include="0.2.h" />
-    <ClInclude Include="0.3.h" />
-    <ClInclude Include="0.4.h" />
+    <ClCompile Include="0.1.c" />
+    <ClCompile Include="0.2.c" />
+    <ClCompile Include="0.3.c" />
+    <ClCompile Include="array_queue.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

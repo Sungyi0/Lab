@@ -28,22 +28,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.5.cpp">
+    <ClCompile Include="1.5.c">
       <Filter>01 재귀적 프로그래밍\1.5 금액 맞추기</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="0.1.h">
-      <Filter>00 시작하기\0.1 최대와 최소</Filter>
-    </ClInclude>
-    <ClInclude Include="0.2.h">
-      <Filter>00 시작하기\0.2 두 변수의 값 바꾸기</Filter>
-    </ClInclude>
-    <ClInclude Include="0.3.h">
+    <ClCompile Include="0.3.c">
       <Filter>00 시작하기\0.3 배열 회전</Filter>
-    </ClInclude>
-    <ClInclude Include="0.4.h">
+    </ClCompile>
+    <ClCompile Include="0.2.c">
+      <Filter>00 시작하기\0.2 두 변수의 값 바꾸기</Filter>
+    </ClCompile>
+    <ClCompile Include="0.1.c">
+      <Filter>00 시작하기\0.1 최대와 최소</Filter>
+    </ClCompile>
+    <ClCompile Include="array_circlequeue.c">
       <Filter>00 시작하기\0.4 은행 대기번호 관리</Filter>
-    </ClInclude>
+    </ClCompile>
+    <ClCompile Include="array_queue.c">
+      <Filter>00 시작하기\0.4 은행 대기번호 관리</Filter>
+    </ClCompile>
+    <ClCompile Include="array_stack.c">
+      <Filter>00 시작하기\0.4 은행 대기번호 관리</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
