@@ -49,5 +49,17 @@
     <ClCompile Include="array_stack.c">
       <Filter>00 시작하기\0.4 은행 대기번호 관리</Filter>
     </ClCompile>
+    <ClCompile Include="template_queue.c">
+      <Filter>00 시작하기\0.4 은행 대기번호 관리</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlist_queue.cpp">
+      <Filter>00 시작하기\0.5 연결리스트</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlist_queue.c">
+      <Filter>00 시작하기\0.5 연결리스트</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleEndedQueue.c">
+      <Filter>00 시작하기\0.5 연결리스트</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

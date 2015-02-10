@@ -16,7 +16,7 @@ int main()
 	for (i = 0; i < STACK_SIZE; ++i)
 		stack[i] = 0;
 
-	while (input > 0)
+	while (input >= 0)
 	{
 		printf("Input Number: ");
 		scanf_s("%d", &input);
@@ -25,12 +25,21 @@ int main()
 		if (input > 0)
 		{
 			if (header < STACK_SIZE)
-			stack[header++] = input;
+				stack[header++] = input;
+			else
+				printf("stack is full!\n");
 		}
 		// 0이라면 추출
 		else if (input == 0)
-			printf("%d\n", stack[header--]);
-		else
+		{
+			if (header > 0)
+			{
+				printf("[%d]\n", stack[header-1]);
+				--header;
+			}
+			else
+				printf("stack is empty!\n");
+		}
 	}
 
 	return 0;
