@@ -5,10 +5,21 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="exam">
+      <UniqueIdentifier>{a9fd8d47-f23d-4e46-bf6f-bd30cda3b982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exam\input">
+      <UniqueIdentifier>{e0e9c463-64b4-4704-9f67-058ef58fbd68}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="digit sum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="exam\input\12517 - Digit Sum.txt">
+      <Filter>exam\input</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -80,6 +80,9 @@
   <ItemGroup>
     <ClCompile Include="digit sum.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="exam\input\12517 - Digit Sum.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
