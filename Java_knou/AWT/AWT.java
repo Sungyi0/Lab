@@ -1,37 +1,35 @@
 import java.awt.*;
+import java.awt.event.*;
+
+class MyListener implements WindowListener {
+	public void windowClosing(WindowEvent ev) {
+		System.exit(0);
+	}
+	
+	public void windowActivated(WindowEvent ev) {}
+	public void windowClosed(WindowEvent ev) {}
+	public void windowDeactivated(WindowEvent ev) {}
+	public void windowDeiconified(WindowEvent ev) {}
+	public void windowIconified(WindowEvent ev) {}
+	public void windowOpened(WindowEvent ev) {}
+}
 
 class MyFrame extends Frame {
-	private FileDialog fDialog = null;
 	public MyFrame(String title) {
-	super(title);
-	this.setSize(400, 300);
-	this.setVisible(true);
+		super(title);
+		this.setSize(400, 300);
+		this.setVisible(true);
+		
+		this.addWindowListener(new MyListener());
 	}
 	
 	public void paint(Graphics g) {
-		super.paint(g);
-		if (fDialog != null) putMsg(g);
-	}
-	public void update(Graphics g) {
-		putMsg(g);
-	}
-	public void setDialog(FileDialog f) {
-		fDialog = f;
-	}
-	private void putMsg(Graphics g) {
-		g.drawString("Directory: " + fDialog.getDirectory(), 10, 50);
-		g.drawString("File: " + fDialog.getFile(), 10, 100);
+		g.drawString("Hello AWT", 150, 150);
 	}
 }
 
 public class AWT {
 	public static void main(String args[]) {
-		MyFrame myFrame = new MyFrame("FileDialogTest");
-		FileDialog f = new FileDialog(myFrame, "Open", FileDialog.LOAD);
-		
-		f.setVisible(true);
-		myFrame.setDialog(f);
-		
-		myFrame.repaint();
+		MyFrame myFrame = new MyFrame("Hello AWT");
 	}
 }
