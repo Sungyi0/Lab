@@ -1,28 +1,35 @@
 import java.awt.*;
 import java.awt.event.*;
 
-class MyFrame extends Frame {
-	public MyFrame(String title) {
-		super(title);
-		this.setSize(400, 300);
-		this.setVisible(true);
-		
-		WindowListener xListener = new WindowAdapter() {
-			public void windowClosing(WindowEvent ev) {
-				System.exit(0);
-			}
-		};
-		
-		this.addWindowListener(xListener);
-	}
+public class AWT extends Frame {
+	Label msg = null;
+	Panel msgPanel = null, commandPanel = null;
+	Button yesButton = null, noButton = null, cancelButton = null;
 	
-	public void paint(Graphics g) {
-		g.drawString("Hello AWT", 150, 150);
+	public AWT() {
+		setTitle("Panel Test");
+		msgPanel = new Panel();
+		commandPanel = new Panel();
+		
+		msg = new Label("Hello!");
+		msg.setEnabled(false);
+		msgPanel.add(msg);
+		yesButton = new Button("yes");
+		noButton = new Button("no");
+		cancelButton = new Button("cancel");
+		
+		commandPanel.add(yesButton);
+		commandPanel.add(noButton);
+		commandPanel.add(cancelButton);
+		
+		add("Center", msgPanel);
+		add("South", commandPanel);
+		
+		setSize(300, 100);
 	}
-}
 
-public class AWT {
 	public static void main(String args[]) {
-		MyFrame myFrame = new MyFrame("Hello AWT");
+		AWT pt = new AWT();
+		pt.setVisible(true);
 	}
 }
