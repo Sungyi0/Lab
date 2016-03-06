@@ -1,26 +1,19 @@
 import java.awt.*;
 import java.awt.event.*;
 
-class MyListener implements WindowListener {
-	public void windowClosing(WindowEvent ev) {
-		System.exit(0);
-	}
-	
-	public void windowActivated(WindowEvent ev) {}
-	public void windowClosed(WindowEvent ev) {}
-	public void windowDeactivated(WindowEvent ev) {}
-	public void windowDeiconified(WindowEvent ev) {}
-	public void windowIconified(WindowEvent ev) {}
-	public void windowOpened(WindowEvent ev) {}
-}
-
 class MyFrame extends Frame {
 	public MyFrame(String title) {
 		super(title);
 		this.setSize(400, 300);
 		this.setVisible(true);
 		
-		this.addWindowListener(new MyListener());
+		WindowListener xListener = new WindowAdapter() {
+			public void windowClosing(WindowEvent ev) {
+				System.exit(0);
+			}
+		};
+		
+		this.addWindowListener(xListener);
 	}
 	
 	public void paint(Graphics g) {
